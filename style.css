@@ -32,18 +32,24 @@ li a {
 
 main {
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     background-color: hsl(192,43%,27%);
+    flex-wrap: wrap;
+    
+    flex: 1 1 auto;
 }
 
+/************** left side **********/
 .main-left {
-    padding: 20px;
-    color: white;   
+    padding: 20px 0px 20px 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;    
 }
 
 .main-left h1 {
-    font-size: 2rem;
-    max-width: 20vw;
+    font-size: 2rem;    
 }
 
 .main-left p {
@@ -52,12 +58,24 @@ main {
     margin-bottom: 20px;
 }
 
-.hero-image {
+/********* right side ***************/
+.hero-image-container {
     display: flex;
-    aspect-ratio: 16 / 9;
-    object-fit: cover; /* maintain original image aspect ratio */
-    width: 100%;
-    height: 30vh;  
+    
+    
+     /* max width of container */
+    /* min-height: 300px; */
+     /* pic is way too big */
+    flex: 1 1 auto;
+    align-items: center;
+}
+
+.hero-image {
+    aspect-ratio: 1 / 1;
+    max-height: 450px;
+    object-fit: cover; /* to prevent warping when it wraps to next row */
+    flex: 1 1 auto;
+    
 }
 
 button {
@@ -136,18 +154,19 @@ button {
     background-color: hsl(192,43%,27%);
     justify-content: space-between;
     align-items: center;
-    height: 100px;
     padding: 10px;
-    width: 800px; /* max-width doesn't work here */
+    /* width: 800px; /* max-width doesn't work here */
     border-radius: 3px;
-    margin: 20px auto;
-    
+    flex: 1 1 auto;
+    margin: 20px 100px;
+    /* flex-wrap: wrap; */
 }
 
 .cta-verbage {
     color: white;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .cta-button {
@@ -163,8 +182,9 @@ footer {
     display: flex;
     flex: 1 1 auto;
     align-items: center;
-    width: 100%;
+    width: 100%; /*100vw scrolls to window size*/
     justify-content: right;
     padding: 10px;
     max-height: 80px;
+    box-sizing: border-box;
 }
