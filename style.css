@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    max-width: 1024px;
+    margin: auto; /* centering everything */
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+li a {
+    color: #333;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between; 
+    background-color: hsl(192,43%,27%);
+}
+
+.main-left {
+    padding: 20px;
+    color: white;   
+}
+
+.main-left h1 {
+    font-size: 2rem;
+    max-width: 20vw;
+}
+
+.main-left p {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* maintain original image aspect ratio */
+    width: 100%;
+    height: 30vh;  
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    background-color: #3D9991; 
+    border-radius: 3px;
+    box-sizing: border-box; /* deduct added padding/margin from box dimensions */
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h2 {
+    margin: 20px auto;
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    max-width: 220px;
+}
+
+.card img {
+    width: 100%;
+    max-height: 400px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* maintain original image aspect ratio */
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+}
+
+.card:hover > img {
+    transform: scale(1.025);
+}
+
+.card p {
+    text-align: center;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: #eeeeee;
+    padding: 3rem;
+    flex: 1 1 auto; /* needed here to push everything down to bottom of screen */
+    justify-content: center; /* vertical centering since the main axis is now column */
+}
+
+.quote h3 {
+    text-align: center;
+}
+
+.quote p {
+    text-align: center;
+}
+
+.cta {
+    display: flex;
+    background-color: hsl(192,43%,27%);
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px;
+    width: 800px; /* max-width doesn't work here */
+    border-radius: 3px;
+    margin: 20px auto;
+    
+}
+
+.cta-verbage {
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-button {
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    text-align: right;
+    margin: 10px auto;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    width: 100%;
+    justify-content: right;
+    padding: 10px;
+    max-height: 80px;
+}
